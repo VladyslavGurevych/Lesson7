@@ -2,7 +2,7 @@ package app;
 
 import java.util.Random;
 
-public class Lesson6 {
+public class Lesson7 {
     public static void main(String[] args) {
         int[] myArray = new int[20];
         int sumOfNegNumber = 0;
