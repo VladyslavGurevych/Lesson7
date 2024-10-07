@@ -1,5 +1,6 @@
 package app;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Lesson7 {
@@ -27,15 +28,16 @@ public class Lesson7 {
                 sumOfOddNumbers += 1;
             }
         }
+        System.out.println(Arrays.toString(myArray));
         System.out.println("Sum of negative numbers is " + sumOfNegNumber);
         System.out.println("Sum of even numbers is " + sumOfEvenNumbers + ". Sum of odd numbers is " + sumOfOddNumbers);
-        for (int i = 0; i < myArray.length-1; i++) {
-            if (maxNumber < myArray[i+1]){
-                maxNumber = myArray[i+1];
-                maxIndex = i+1;
-            }else if(myArray[i+1] < minNumber){
-                minNumber = myArray[i+1];
-                minIndex = i+1;
+        for (int i = 1; i < myArray.length; i++) {
+            if (maxNumber < myArray[i]){
+                maxNumber = myArray[i];
+                maxIndex = i;
+            }else if(myArray[i] < minNumber){
+                minNumber = myArray[i];
+                minIndex = i;
             }
         }
         System.out.println("The minimum number is " + minNumber + " with index " + minIndex +"\n" +
